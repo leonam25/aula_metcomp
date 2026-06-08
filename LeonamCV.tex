@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=0.8cm,right=0.8cm,top=1cm,bottom=1cm,columnsep=0.8cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{GalaxyPurple}{HTML}{6A0DAD}
+\definecolor{NebulaBlue}{HTML}{1D4ED8}
+\definecolor{StarBlue}{HTML}{60A5FA}
+
+\colorlet{name}{GalaxyPurple}
+\colorlet{tagline}{NebulaBlue}
+\colorlet{heading}{GalaxyPurple}
+\colorlet{headingrule}{StarBlue}
+\colorlet{subheading}{NebulaBlue}
+\colorlet{accent}{NebulaBlue}
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+\begin{document}
+\name{Francisco Leonam Azevedo Andrade}
+\tagline{Graduando em Astronomia pela UFRJ}
+%% You can add multiple photos on the left or right
+\photoR{4.5cm}{eu}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{francisco25@ov.ufrj.br}
+  \phone{(92) 984083572}
+  \location{Rio de Janeiro, RJ}
+
+  \NewInfoField{instagram}{\faInstagram}[https://instagram.com/]
+  \instagram{chico.l3o}
+
+  \NewInfoField{youtube}{\faYoutube}[https://youtube.com/@]
+  \youtube{chico.l3o}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+\columnratio{0.58}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experiências}
+
+\cvevent{Iniciação Científica}{Observatório do Valongo}{2025.2 -- Presente}{Rio de Janeiro, RJ}
+\begin{itemize}
+\item Idades Estelares
+\end{itemize}
+
+\divider
+
+\cvevent{Artista}{Vida}{Desde que me entendo por gente}{Mundo}
+\begin{itemize}
+\item Músico
+\item Escritor e Poeta
+\end{itemize}
+
+\cvsection{Projetos}
+
+\cvevent{Idades de binárias resolvidas no Levantamento HaLi}{Observatório do Valongo}{}{}
+\begin{itemize}
+\item Estudo de métodos para determinação de idades estelares em sistemas binários resolvidos.
+\end{itemize}
+
+\divider
+
+\cvevent{Criação de um perfil Artístico}{Minha Alma}{}{}
+\begin{itemize}
+\item O projeto busca a criação de uma identidade artística e visual própria.
+\end{itemize}
+
+\cvsection{Formação Acadêmica}
+
+\cvevent{Graduando em Astronomia}{Universidade Federal do Rio de Janeiro}{2025.1 -- Presente}{}
+
+\cvsection{Minhas Conquistas}
+
+\cvachievement{\faTrophy}{Iniciação Científica}{Participação em projeto de pesquisa em Astronomia}
+
+\divider
+
+\cvachievement{\faTrophy}{Vida}{Viver todos os dias a minha filosofia de vida}
+
+\divider
+
+\cvachievement{\faTrophy}{Cartões}{Quitar minhas dívidas dos cartões de crédito}
+
+\switchcolumn
+
+\cvsection{Minha filosofia de vida}
+
+\begin{quote}
+`` Já que a única certeza que temos na vida é a morte... Amarei e viverei intensamente cada momento, quem sabe assim então, se eu tiver sorte, tenha a certeza de que amar... me fez mais forte .''
+\end{quote}
+
+\cvsection{Competências}
+
+\cvtag{Determinação}
+\cvtag{Detalhista}\\
+\cvtag{Animador}
+\cvtag{Trabalho em Equipe}
+\divider\smallskip
+
+\cvtag{Python}
+\cvtag{Análise de Dados}\\
+\cvtag{Astronomia}
+\cvtag{LaTeX}
+\cvtag{Linux}
+
+\cvsection{Línguas}
+
+\cvskill{Português}{5}
+\divider
+
+\cvskill{Inglês}{3}
+
+\medskip
+
+\cvsection{Referências}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Prof. Helio Jaques}{Observatório do Valongo}{helio@ov.ufrj.br}
+
+\divider
+
+\cvref{Prof. Bruno Morgado}{Observatório do Valongo}{bmorgado@ov.ufrj.br}
+\end{paracol}
+
+\end{document}
